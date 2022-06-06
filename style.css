@@ -1,0 +1,256 @@
+html,body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: system-ui;
+    font-weight: 300;
+}
+
+body{
+    display: grid;
+    place-items: center;
+}
+
+.phone{
+    border: .5px black solid;
+    border-radius: 16px;
+    height: 720px;
+    width: 380px;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 12px 12px 12px;
+    background-color: lightgray;
+    position: relative;
+}
+
+.phone-head {
+    /* background-color: green; */
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1rem 0rem;
+}
+
+.camera {
+    border: 1px black solid;
+    border-radius: 50%;
+    padding: 6px;
+    background-color: gray;
+    position: absolute;
+    left: 48px;
+}
+
+.speaker {
+    border: 1px solid black;
+    border-radius: 12px;
+    width: 72px;
+    height: 12px;
+    background-color: gray;
+}
+
+.screen {
+    width: 100%;
+    height: 100%;
+    background-image: url("https://i.picsum.photos/id/1025/4951/3301.jpg?hmac=_aGh5AtoOChip_iaMo8ZvvytfEojcgqbCH7dzaz-H8Y");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.screen-bottom {
+    flex: 0 0 64px;
+
+    display: flex;
+    justify-content: space-between;
+    padding: 4px;
+}
+
+.app {
+    border-radius: 6px;
+    width: 20%;
+
+    display: grid;
+    place-content: center;
+    cursor: pointer;
+}
+
+.app:hover {
+    width: 21%;
+    height: 105%;
+    color: white;
+}
+
+.screen-content {
+    flex: 1 0 auto;
+
+}
+
+.red {
+    background-color: red;
+}
+
+.green {
+    background-color: green;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.hide {
+    display: none;
+    animation: hideAnimation 1s;
+}
+
+.contactApp {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+@keyframes hideAnimation {
+    from {
+        display: flex;
+    }
+    to {
+        display: none;
+    }
+}
+
+.contactHeader {
+    display: flex;
+    height: 48px;
+    justify-content: end;
+    align-items: center;
+    position: relative;
+    border-bottom: 0.5px lightgray solid;
+}
+
+.back-icon {
+    padding: 1rem;
+    position: absolute;
+    right: 0;
+}
+
+.back-icon:hover {
+    padding: .75rem;
+    font-size: 125%;
+    cursor: pointer;
+}
+
+.contact-title {
+    flex: 1 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.inner-app {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.search-app {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.search-bar {
+    width: 100%;
+    padding: 0.5rem 2rem;
+    border: 1px lightgray solid;
+    border-radius: 24px;
+    font-size: 24px;
+    font-weight: 200;
+    color: gray;
+}
+
+.contact-list { 
+    overflow: hidden;
+    overflow-y: scroll;
+    height: 540px;
+}
+
+.contact-box {
+    border-top: 1px lightgray solid;
+    border-bottom: 1px lightgray solid;
+    padding: .5rem 1rem;
+}
+
+.name {
+    font-size: x-large;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-box:hover {
+    background-color: black;
+    color: white;
+}
+
+.edit-icon {
+    cursor: pointer;
+}
+
+.no-data-found {
+    display: flex;
+    justify-content: center;
+}
+
+.add-button {
+    position: absolute;
+    font-size: 64px;
+    bottom: 5%;
+    right: 10%;
+    cursor: pointer;
+    background-color: darkcyan;
+    color: white;
+    border-radius: 50%;
+    text-transform: uppercase;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* transform: translate(-50%, 50%); */
+}
+
+.add-button:hover {
+    animation: rotateAni 2s;
+}
+
+.create-form {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.create-form input {
+    padding: .5rem 1rem;
+    font-size: 16px;
+    margin: 1rem 0rem;
+}
+
+@keyframes rotateAni {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(180deg);
+    }
+    
+}
